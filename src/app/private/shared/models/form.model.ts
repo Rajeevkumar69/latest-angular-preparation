@@ -12,16 +12,16 @@ export class FormModel {
      public webUrlValidationMsg = 'Please enter valid URL.';
 
      public formErrors: any = {
-          login: {
-               username: '',
-               password: '',
-          },
+          loginForm: {
+               email: '',
+               password: ''
+          }
      };
 
      public validationMessage: any = {
-          login: {
-               username: {
-                    required: 'Username is required.',
+          loginForm: {
+               email: {
+                    required: 'Email is required.',
                     email: 'Enter correct email',
                },
                password: {

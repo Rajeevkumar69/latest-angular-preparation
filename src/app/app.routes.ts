@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './private/shared/guards/auth/auth.guard';
 
 export const routes: Routes = [
      {
@@ -13,7 +14,11 @@ export const routes: Routes = [
      },
      {
           path: '',
-          canActivate: [],
+          canActivate: [authGuard],
           loadChildren: () => import('./private/shared/routes/features.route').then((r) => r.featuresRoutes),
+     },
+     {
+          path: '**',
+          redirectTo: 'login'
      }
 ];

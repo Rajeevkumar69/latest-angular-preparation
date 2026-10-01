@@ -64,3 +64,9 @@ p {
 .container {
      max-width: 1220px;
 }
+
+.form-label {
+     font-size: 12px;
+     font-weight: 400;
+     color: $label-color;
+}
