@@ -1,1 +1,19 @@
-<p>sidebar works!</p>
+<div class="d-flex">
+     <aside class="bg-dark text-white vh-100 p-3" style="width: 225px;">
+          <h6 class="mb-4 text-center border-bottom pb-2 text-uppercase">
+               Angular Preparation
+          </h6>
+
+          <ul class="nav flex-column gap-1">
+               <li class="nav-item" *ngFor="let item of menuItems">
+                    <button class="btn w-100 text-start d-flex align-items-center gap-2" [ngClass]="{
+            'btn-primary': isActive(item.route),
+            'btn-dark': !isActive(item.route)
+          }" (click)="navigate(item.route)">
+                         <i [class]="item.icon"></i>
+                         <span class="fs-13">{{ item.label }}</span>
+                    </button>
+               </li>
+          </ul>
+     </aside>
+</div>
